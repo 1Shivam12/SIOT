@@ -7,7 +7,7 @@
 - This should then host a local web page in the internet browser at the address: http://localhost:5000/Home \
 - The Cleaning files are included to show how the data was pre-processed \
 
-### Open weather maps API
+###  Weather Data
 - The data was stored in the file titled: weather_file.csv
 
 ### Twython Data
