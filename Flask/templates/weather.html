@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+    <h1>Weather API: Open Weather Maps</h1>
+    
+    <p>The data streamed from the weather API collected data over a period of 4
+    days. The main parameters that were of interest were 
+    <ol>
+        <li>Temperature (<span>&#176;</span>c) </li>
+        <li>Humidity (%)</li>
+        <li>Pressure (Bar)</li>
+    </ol>
+    It was found that the pressure was essentially constant throughout the data
+    collection period and hence this was not controlled in the study.
+       
+    <p>
+        <embed type="image/svg+xml" src={{graph_data|safe}} align="left"/>
+<!--        <embed type="image/svg+xml" src={{graph_data2|safe}} align="left"/> -->
+    <p>
+    The Product Moment Correlation Coefficienct (PMCC) between the humidity and 
+    the temperature is {{ corr}}. The data was normalized and plotted against 
+    time to see its variation across the data collection period. The graph
+    confirms there is no correlation between the 2 data sets. The legend can be
+    used to toggle between the data sources in the line chart below
+    <p>
+{% endblock content %}

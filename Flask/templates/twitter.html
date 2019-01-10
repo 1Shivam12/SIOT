@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+    <h1>Twitter API: Twython</h1>
+    <p>A python wrapper, twython, for twitter was used to stream data from the 
+    official twitter API. The API call that was made initiated a twython streamer
+    class to start search for tweets containing a few key words that correspond 
+    to tweets about movies, these were
+    <ol>
+        <li>Movies </li>
+        <li>Cinema</li>
+        <li>Film</li>
+        <li>Vue Cinema</li>
+        <li>Cineworld</li>
+    </ol>    
+    
+    <p>
+    <embed type="image/svg+xml" src={{graph2_data|safe}} style="max-width:1000px"/>
+    
+    <p>The number of tweets collected per day were pretty much the same throughout
+    the data collection period. It can therefore be seen that there isn't much
+    of a data variation with time in this data set.     
+    <p>
+
+<!-- <embed type="image/svg+xml" src={{graph1_data|safe}} style="max-width:1000px"/> -->
+{% endblock content %}

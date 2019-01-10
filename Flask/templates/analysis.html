@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <h1>Analysis of Data Sets</h1>
+    <h2>Sentiment Analysis</h2>
+    <p> The twitter data gathered was analysed through basic sentiment analysis.
+    The data was handled and cleaned using textblob and its inbuilt data handling
+    features. These were cruicial in ensuring that there weren't any errors such
+    as special characters or NaN values throwing issues when accessing the data.
+    The NLTK python library was used to perform the sentiment analysis and a 
+    scatter plot of the polarity data was used to visualize the general mood of 
+    the tweeting population. It can be seen that there aren't any trends to follow
+    through the span of the data collection period. For the purpose of the app, 
+    a moving average filter will be implemented which takes the data from the previous
+    hour or day and returns an average polarity value.   
+    <p>
+    <embed type="image/svg+xml" src={{line_data|safe}} align="left"/>
+    <h2>Autocorrelation and Cross Correlation</h2>    
+    <embed type="image/svg+xml" src={{graph_data|safe}} align="left"/>
+    <p>Autocorrelation is a measure of a functions similiarty to a lagged version
+    of itself. We can see that both temperature and humidity levels show similar 
+    Autocorrelation Functions (ACF). These graphs were obtained by using the 
+    ACF in the pandas library. The function returned a single value, so the 
+    data series were obtained by creating a plot of ACF value against the lag
+    parameter. We can see that both parameters display a cyclic nature in their
+    ACFs and this is expected from weather data. The ACF for the twitter shows
+    no trends or cyclicity. This follows the same trends as shown in previous 
+    analyses for this dataset.  <p>
+    <embed type="image/svg+xml" src={{graph3_data|safe}} align="left"/>
+    <p>Cross-Correlation is a measure of the similarity of 2 signals. There is 
+    a visible and strong correlation between the temperature and humidity data which
+    can be seen by the cyclic and high magnitude of the Cross Correlation Function (CCF).
+    It is interesting to see that there is a very similiar cyclicity to the CCF 
+    for humidity vs twitter polarity, however, the magnitude of the CCF is a lot
+    smaller and hence there is no correlation between these data sets.    
+    <p>
+    <embed type="image/svg+xml" src={{graph4_data|safe}} align="left"/>
+{% endblock content %}
