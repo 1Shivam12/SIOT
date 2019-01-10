@@ -8,12 +8,12 @@
 - The Cleaning files are included to show how the data was pre-processed \
 
 ### Open weather maps API
-The data was stored in the file titled: weather_file.csv
+- The data was stored in the file titled: weather_file.csv
 
 ### Twython Data
-The data was stored in the file titled: saved_tweetsv3.csv 
+- The data was stored in the file titled: saved_tweetsv3.csv 
 
 ## Python subfolder
 
-The twitter API and python API .py files were uploaded to the raspberry pi and run using cron jobs 
+- The twitter API and python API .py files were uploaded to the raspberry pi and run using cron jobs 
 
