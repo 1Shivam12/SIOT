@@ -17,3 +17,7 @@
 
 - The twitter API and python API .py files were uploaded to the raspberry pi and run using cron jobs 
 
+## App Usage Guide : Video
+- Visit the page below to get a quick overview of how to use the app
+- https://youtu.be/twr_-zYRdo4
+
